@@ -45,9 +45,11 @@ class ProfilePage extends StatelessWidget {
             },
           ),
         ],
-        
+
         elevation: 0,
       ),
+
+      
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -79,7 +81,7 @@ class ProfilePage extends StatelessWidget {
                   const SizedBox(height: 16),
 
                   Text(
-                    displayName,
+                    username,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 22,

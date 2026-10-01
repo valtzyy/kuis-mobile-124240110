@@ -314,7 +314,7 @@ class _ProductCard extends StatelessWidget {
         await Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailPage(product: product),
+            builder: (context) => DetailPage(product: product,),
           ),
         );
         onUpdate();

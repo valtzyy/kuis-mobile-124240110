@@ -4,7 +4,7 @@ import 'package:kuis_mobile/models/data.dart';
 class DetailPage extends StatefulWidget {
   final Product product;
 
-  const DetailPage({super.key, required this.product});
+  const DetailPage({super.key, required this.product,});
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -165,7 +165,7 @@ class _DetailPageState extends State<DetailPage> {
                   const SizedBox(height: 16),
 
 
-
+                  // Jumlah Produk
                   Row(
                     children: [
                       const Text(
@@ -184,6 +184,7 @@ class _DetailPageState extends State<DetailPage> {
                         Icons.remove_circle_outline_rounded,
                         size: 30,
                         color: Colors.black,
+                      
                       ),
 
                       const SizedBox(width: 12),
@@ -268,41 +269,7 @@ class _DetailPageState extends State<DetailPage> {
 
                   const SizedBox(height: 32),
 
-                  // Add to Cart Button
-                  SizedBox(
-                    width: double.infinity,
-                    height: 52,
-                    child: ElevatedButton.icon(
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            backgroundColor: const Color(0xFF1A1A1A),
-                            content: Text(
-                              "${widget.product.productName} ditambahkan ke keranjang!",
-                              style: const TextStyle(color: Colors.white),
-                            ),
-                            duration: const Duration(seconds: 2),
-                          ),
-                        );
-                      },
-                      icon: const Icon(Icons.shopping_bag_outlined),
-                      label: const Text(
-                        "TAMBAH KE KERANJANG",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF1A1A1A),
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        elevation: 0,
-                      ),
-                    ),
-                  ),
+                 
 
                   const SizedBox(height: 16),
 
